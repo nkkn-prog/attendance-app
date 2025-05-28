@@ -8,7 +8,7 @@ interface HeaderProps {
   title: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ title }) => {
+export function Header({ title }: HeaderProps) {
   return (
     <Box h="100%" px="md" style={{ display: 'flex', alignItems: 'center' }}>
       <Group justify="space-between" style={{ width: '100%' }}>
@@ -30,3 +30,4 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
     </Box>
   );
 };
+export default Header;

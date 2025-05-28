@@ -6,7 +6,7 @@ import { LogIn, LogOut, Coffee, CoffeeIcon } from 'lucide-react';
 import { ClockButton } from './ClockButton';
 import { useAttendance } from '@/hooks/useAttendance';
 
-export const ClockScreen: React.FC = () => {
+export function ClockScreen() {
   const { clockedIn, onBreak, handleClockIn, handleClockOut, handleBreakStart, handleBreakEnd } = useAttendance();
   const currentTime = new Date().toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
   const currentDate = new Date().toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
@@ -78,3 +78,4 @@ export const ClockScreen: React.FC = () => {
     </Container>
   );
 };
+export default ClockScreen;
