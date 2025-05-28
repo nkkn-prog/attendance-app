@@ -13,14 +13,14 @@ interface ClockButtonProps {
   subText?: string;
 }
 
-export const ClockButton: React.FC<ClockButtonProps> = ({
+export function ClockButton({
   icon: Icon,
   label,
   onClick,
   disabled = false,
   color,
   subText
-}) => {
+}: ClockButtonProps) {
   return (
     <Paper
       shadow="sm"
@@ -46,3 +46,5 @@ export const ClockButton: React.FC<ClockButtonProps> = ({
     </Paper>
   );
 };
+
+export default ClockButton;

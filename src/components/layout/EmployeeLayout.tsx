@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { AppShell, Burger, MediaQuery, Group } from '@mantine/core';
+import { AppShell, Burger, Group, Box } from '@mantine/core';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { Header } from '@/components/layout/Header';
 
@@ -10,7 +10,7 @@ interface EmployeeLayoutProps {
   title: string;
 }
 
-export const EmployeeLayout: React.FC<EmployeeLayoutProps> = ({ children, title }) => {
+export function EmployeeLayout({ children, title }: EmployeeLayoutProps) {
   const [navbarOpened, setNavbarOpened] = useState(false);
 
   return (
@@ -30,14 +30,14 @@ export const EmployeeLayout: React.FC<EmployeeLayoutProps> = ({ children, title 
     >
       <AppShell.Header>
         <Group h="100%" px="md">
-          <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+          <Box hiddenFrom="sm">
             <Burger
               opened={navbarOpened}
               onClick={() => setNavbarOpened((o) => !o)}
               size="sm"
               aria-label="ナビゲーションを開閉"
             />
-          </MediaQuery>
+          </Box>
           <Header title={title} />
         </Group>
       </AppShell.Header>
@@ -52,3 +52,5 @@ export const EmployeeLayout: React.FC<EmployeeLayoutProps> = ({ children, title 
     </AppShell>
   );
 };
+
+export default EmployeeLayout;

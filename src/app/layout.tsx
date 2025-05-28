@@ -27,10 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <head>
-        <ColorSchemeScript />
+      <head suppressHydrationWarning>
+        <ColorSchemeScript/>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`} >
         <MantineProvider>
           {children}
         </MantineProvider>

@@ -14,7 +14,7 @@ const navigationItems = [
   { id: 'settings', label: '設定', icon: Settings, path: '/settings/profile' },
 ];
 
-export const Sidebar: React.FC = () => {
+export function Sidebar() {
   const pathname = usePathname();
 
   return (
@@ -54,3 +54,5 @@ export const Sidebar: React.FC = () => {
     </ScrollArea>
   );
 };
+
+export default Sidebar;

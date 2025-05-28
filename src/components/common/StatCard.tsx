@@ -11,13 +11,13 @@ interface StatCardProps {
   valueColor?: string;
 }
 
-export const StatCard: React.FC<StatCardProps> = ({ 
+export function StatCard({ 
   icon, 
   value, 
   label, 
   iconColor = 'blue',
   valueColor
-}) => {
+}: StatCardProps) {
   return (
     <Paper shadow="sm" radius="md" p="lg">
       <Group justify="space-between" mb="xs">
@@ -32,3 +32,5 @@ export const StatCard: React.FC<StatCardProps> = ({
     </Paper>
   );
 };
+
+export default StatCard;
