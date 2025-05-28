@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { AppShell } from '@mantine/core';
+import React, { useState } from 'react';
+import { AppShell, Burger, MediaQuery, Group } from '@mantine/core';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { Header } from '@/components/layout/Header';
 
@@ -11,10 +11,16 @@ interface EmployeeLayoutProps {
 }
 
 export const EmployeeLayout: React.FC<EmployeeLayoutProps> = ({ children, title }) => {
+  const [navbarOpened, setNavbarOpened] = useState(false);
+
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{ width: 250, breakpoint: 'sm' }}
+      navbar={{
+        width: 250,
+        breakpoint: 'sm',
+        collapsed: { mobile: !navbarOpened, desktop: false },
+      }}
       padding="md"
       styles={{
         main: {
@@ -23,11 +29,23 @@ export const EmployeeLayout: React.FC<EmployeeLayoutProps> = ({ children, title 
       }}
     >
       <AppShell.Header>
-        <Header title={title} />
+        <Group h="100%" px="md">
+          <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+            <Burger
+              opened={navbarOpened}
+              onClick={() => setNavbarOpened((o) => !o)}
+              size="sm"
+              aria-label="ナビゲーションを開閉"
+            />
+          </MediaQuery>
+          <Header title={title} />
+        </Group>
       </AppShell.Header>
-      <AppShell.Navbar>
+
+      <AppShell.Navbar p={0}>
         <Sidebar />
       </AppShell.Navbar>
+
       <AppShell.Main>
         {children}
       </AppShell.Main>
