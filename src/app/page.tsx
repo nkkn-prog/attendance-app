@@ -20,7 +20,7 @@ export default function Home() {
           <Text c="dimmed" ta="center">ログインして勤怠管理を始めましょう</Text>
           
           <Button 
-            onClick={() => router.push('/dashboard')}
+            onClick={() => router.push('/user/dashboard')}
             fullWidth
             size="lg"
             mt="md"

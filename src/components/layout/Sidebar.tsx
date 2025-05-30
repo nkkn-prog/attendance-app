@@ -7,11 +7,11 @@ import { NavLink, ScrollArea, Group, Text, ThemeIcon } from '@mantine/core';
 import { Home, Clock, Calendar, FileText, Settings } from 'lucide-react';
 
 const navigationItems = [
-  { id: 'dashboard', label: 'ホーム', icon: Home, path: '/dashboard' },
-  { id: 'clock', label: '打刻', icon: Clock, path: '/attendance/clock' },
-  { id: 'attendances', label: '勤怠履歴', icon: Calendar, path: '/attendances' },
-  { id: 'requests', label: '申請', icon: FileText, path: '/requests' },
-  { id: 'settings', label: '設定', icon: Settings, path: '/settings/profile' },
+  { id: 'dashboard', label: 'ホーム', icon: Home, path: '/user/dashboard' },
+  { id: 'clock', label: '打刻', icon: Clock, path: '/user/attendance/clock' },
+  { id: 'attendances', label: '勤怠履歴', icon: Calendar, path: '/user/attendances' },
+  { id: 'requests', label: '申請', icon: FileText, path: '/user/requests' },
+  { id: 'settings', label: '設定', icon: Settings, path: '/user/settings/profile' },
 ];
 
 export function Sidebar() {
