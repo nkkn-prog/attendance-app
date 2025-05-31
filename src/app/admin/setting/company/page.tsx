@@ -16,7 +16,7 @@ export default function CompanySettingsPage() {
             <Button
               variant="subtle"
               leftSection={<ArrowLeft size={16} />}
-              onClick={() => router.push('/admin/settings')}
+              onClick={() => router.push('/admin/setting')}
             >
               戻る
             </Button>
