@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
   Paper,
@@ -133,18 +132,6 @@ export default function LoginPage() {
                 </Button>
               </Stack>
             </form>
-
-            <Divider my="md" />
-
-            <Text size="sm" style={{ textAlign: 'center' }}>
-              アカウントをお持ちでない方は{' '}
-              <Link
-                href="/signup"
-                style={{ color: '#2d5a8e', textDecoration: 'none', fontWeight: 600 }}
-              >
-                新規登録
-              </Link>
-            </Text>
           </Stack>
         </Paper>
 
