@@ -48,7 +48,7 @@ export default function TraditionalLoginPage() {
     >
       <Container size={460}>
         <Paper radius="lg" p={40} shadow="xl" style={{ backgroundColor: '#ffffff' }}>
-          <Stack spacing="md">
+          <Stack gap="md">
             <Box style={{ textAlign: 'center' }}>
               <Box
                 style={{
@@ -78,7 +78,7 @@ export default function TraditionalLoginPage() {
             )}
 
             <form onSubmit={handleSubmit}>
-              <Stack spacing="md">
+              <Stack gap="md">
                 <TextInput
                   label="メールアドレス"
                   placeholder="your-email@company.jp"
@@ -137,7 +137,7 @@ export default function TraditionalLoginPage() {
             <Text size="sm" style={{ textAlign: 'center' }}>
               アカウントをお持ちでない方は{' '}
               <Link
-                href="/signup/traditional"
+                href="/signup"
                 style={{ color: '#2d5a8e', textDecoration: 'none', fontWeight: 600 }}
               >
                 新規登録

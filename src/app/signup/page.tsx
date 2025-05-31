@@ -62,7 +62,7 @@ export default function TraditionalSignupPage() {
     >
       <Container size={480}>
         <Paper radius="lg" p={40} shadow="xl" style={{ backgroundColor: '#ffffff' }}>
-          <Stack spacing="md">
+          <Stack gap="md">
             <Box style={{ textAlign: 'center' }}>
               <Box
                 style={{
@@ -92,7 +92,7 @@ export default function TraditionalSignupPage() {
             )}
 
             <form onSubmit={handleSubmit}>
-              <Stack spacing="md">
+              <Stack gap="md">
                 <TextInput
                   label="会社名"
                   placeholder="株式会社〇〇"
@@ -211,7 +211,7 @@ export default function TraditionalSignupPage() {
             <Text size="sm" style={{ textAlign: 'center' }}>
               既にアカウントをお持ちの方は{' '}
               <Link
-                href="/login/traditional"
+                href="/login"
                 style={{ color: '#2d5a8e', textDecoration: 'none', fontWeight: 600 }}
               >
                 ログイン
