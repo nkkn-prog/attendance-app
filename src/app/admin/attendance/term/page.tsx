@@ -2,15 +2,11 @@
 
 import EmployeeLayout from '@/components/layout/EmployeeLayout';
 import { Title, Paper, Stack, Text, Button } from '@mantine/core';
-import { DatePickerInput } from '@mantine/dates';
 import { CalendarDays, ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 
 export default function AttendanceTermPage() {
   const router = useRouter();
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
 
   return (
     <EmployeeLayout title="期間指定勤怠一覧">
