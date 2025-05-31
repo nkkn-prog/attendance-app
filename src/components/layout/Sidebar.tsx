@@ -4,33 +4,43 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { NavLink, ScrollArea, Group, Text, ThemeIcon } from '@mantine/core';
-import { Home, Clock, Calendar, FileText, Settings } from 'lucide-react';
+import { Home, Clock, Calendar, FileText, Settings, Users, BarChart3, Shield } from 'lucide-react';
 
-const navigationItems = [
-  { id: 'dashboard', label: 'ホーム', icon: Home, path: '/dashboard' },
-  { id: 'clock', label: '打刻', icon: Clock, path: '/attendance/clock' },
-  { id: 'attendances', label: '勤怠履歴', icon: Calendar, path: '/attendances' },
-  { id: 'requests', label: '申請', icon: FileText, path: '/requests' },
-  { id: 'settings', label: '設定', icon: Settings, path: '/settings/profile' },
+const userNavigationItems = [
+  { id: 'dashboard', label: 'ホーム', icon: Home, path: '/user/dashboard' },
+  { id: 'clock', label: '打刻', icon: Clock, path: '/user/attendance/clock' },
+  { id: 'attendances', label: '勤怠履歴', icon: Calendar, path: '/user/attendances' },
+  { id: 'requests', label: '申請', icon: FileText, path: '/user/requests' },
+  { id: 'settings', label: '設定', icon: Settings, path: '/user/settings/profile' },
+];
+
+const adminNavigationItems = [
+  { id: 'dashboard', label: 'ダッシュボード', icon: BarChart3, path: '/admin/dashboard' },
+  { id: 'employee', label: '従業員管理', icon: Users, path: '/admin/employee' },
+  { id: 'attendance', label: '勤怠管理', icon: Calendar, path: '/admin/attendance' },
+  { id: 'leave-request', label: '休暇申請管理', icon: FileText, path: '/admin/leave-request' },
+  { id: 'setting', label: '設定', icon: Settings, path: '/admin/setting' },
 ];
 
 export function Sidebar() {
   const pathname = usePathname();
+  const isAdminRoute = pathname.startsWith('/admin');
+  const navigationItems = isAdminRoute ? adminNavigationItems : userNavigationItems;
 
   return (
     <ScrollArea h="100%">
       <div style={{ padding: '1rem' }}>
         <Group mb="xl">
-          <ThemeIcon size="lg" variant="filled" color="blue">
-            <Clock size={24} />
+          <ThemeIcon size="lg" variant="filled" color={isAdminRoute ? "grape" : "blue"}>
+            {isAdminRoute ? <Shield size={24} /> : <Clock size={24} />}
           </ThemeIcon>
-          <Text size="xl" fw={700}>勤怠管理</Text>
+          <Text size="xl" fw={700}>{isAdminRoute ? "管理者画面" : "勤怠管理"}</Text>
         </Group>
         
         <nav>
           {navigationItems.map((item) => {
             const Icon = item.icon;
-            const isActive = pathname === item.path;
+            const isActive = pathname.startsWith(item.path);
             
             return (
               <NavLink
