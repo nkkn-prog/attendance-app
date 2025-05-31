@@ -1,12 +1,13 @@
 'use client';
 
-import { Container, Title, Paper, Stack, Grid, Text } from '@mantine/core';
+import { Title, Paper, Stack, Grid, Text } from '@mantine/core';
 import { BarChart3, Users, Clock, Calendar } from 'lucide-react';
 import { StatCard } from '@/components/common/StatCard';
+import { EmployeeLayout } from '@/components/layout/EmployeeLayout';
 
 export default function AdminDashboardPage() {
   return (
-    <Container size="xl" mt="xl">
+    <EmployeeLayout title="管理者ダッシュボード">
       <Paper p="xl" shadow="md" withBorder>
         <Stack>
           <Title order={1}>管理者ダッシュボード</Title>
@@ -48,6 +49,6 @@ export default function AdminDashboardPage() {
           </Grid>
         </Stack>
       </Paper>
-    </Container>
+    </EmployeeLayout>
   );
 }
