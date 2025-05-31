@@ -16,10 +16,10 @@ const userNavigationItems = [
 
 const adminNavigationItems = [
   { id: 'dashboard', label: 'ダッシュボード', icon: BarChart3, path: '/admin/dashboard' },
-  { id: 'employees', label: '従業員管理', icon: Users, path: '/admin/employee' },
+  { id: 'employee', label: '従業員管理', icon: Users, path: '/admin/employee' },
   { id: 'attendance', label: '勤怠管理', icon: Calendar, path: '/admin/attendance' },
-  { id: 'leave-requests', label: '休暇申請管理', icon: FileText, path: '/admin/leave-requests' },
-  { id: 'settings', label: '設定', icon: Settings, path: '/admin/settings' },
+  { id: 'leave-request', label: '休暇申請管理', icon: FileText, path: '/admin/leave-request' },
+  { id: 'setting', label: '設定', icon: Settings, path: '/admin/setting' },
 ];
 
 export function Sidebar() {
