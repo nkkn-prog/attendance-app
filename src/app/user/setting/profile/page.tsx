@@ -4,7 +4,7 @@ import { EmployeeLayout } from '@/components/layout/EmployeeLayout';
 import { Paper, TextInput, Button, Group, Stack, Avatar } from '@mantine/core';
 import { User } from 'lucide-react';
 
-export default function ProfileSettingsPage() {
+export default function ProfileSettingPage() {
   return (
     <EmployeeLayout title="プロフィール設定">
       <Paper shadow="sm" p="xl">
