@@ -8,7 +8,7 @@ interface HeaderProps {
   title: string;
 }
 
-export function Header({ title }: HeaderProps) {
+export function Header({}: HeaderProps) {
   return (
     <Box h="100%" px="md" style={{ display: 'flex', alignItems: 'center' }}>
       <Group justify="space-between" style={{ width: '100%' }}>
