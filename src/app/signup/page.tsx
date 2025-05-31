@@ -16,10 +16,11 @@ import {
   Divider,
   Alert,
   Checkbox,
+  Center,
 } from '@mantine/core';
 import { Building2, Mail, Lock, User, Building, AlertCircle } from 'lucide-react';
 
-export default function TraditionalSignupPage() {
+export default function SignupPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({
     companyName: '',
@@ -46,7 +47,7 @@ export default function TraditionalSignupPage() {
     // Supabase認証ロジックをここに実装
     setTimeout(() => {
       setLoading(false);
-      router.push('/login/traditional');
+      router.push('/login');
     }, 1000);
   };
 
@@ -55,14 +56,14 @@ export default function TraditionalSignupPage() {
       style={{
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%)',
-        display: 'flex',
-        alignItems: 'center',
-        padding: '40px 0',
+        position: 'relative',
+        overflow: 'auto',
       }}
     >
-      <Container size={480}>
-        <Paper radius="lg" p={40} shadow="xl" style={{ backgroundColor: '#ffffff' }}>
-          <Stack gap="md">
+      <Center mih="100vh" p="md" py="xl">
+        <Container size="sm" w="100%">
+          <Paper radius="lg" p="xl" shadow="xl">
+            <Stack>
             <Box style={{ textAlign: 'center' }}>
               <Box
                 style={{
@@ -92,7 +93,7 @@ export default function TraditionalSignupPage() {
             )}
 
             <form onSubmit={handleSubmit}>
-              <Stack gap="md">
+              <Stack>
                 <TextInput
                   label="会社名"
                   placeholder="株式会社〇〇"
@@ -220,10 +221,11 @@ export default function TraditionalSignupPage() {
           </Stack>
         </Paper>
 
-        <Text size="xs" c="white" style={{ textAlign: 'center', marginTop: '24px' }}>
-          © 2024 勤怠管理システム. All rights reserved.
-        </Text>
-      </Container>
+          <Text size="xs" c="white" ta="center" mt="xl">
+            © 2024 勤怠管理システム. All rights reserved.
+          </Text>
+        </Container>
+      </Center>
     </Box>
   );
 }

@@ -15,10 +15,11 @@ import {
   Box,
   Divider,
   Alert,
+  Center,
 } from '@mantine/core';
 import { Building2, Mail, Lock, AlertCircle } from 'lucide-react';
 
-export default function TraditionalLoginPage() {
+export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -42,13 +43,14 @@ export default function TraditionalLoginPage() {
       style={{
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%)',
-        display: 'flex',
-        alignItems: 'center',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
-      <Container size={460}>
-        <Paper radius="lg" p={40} shadow="xl" style={{ backgroundColor: '#ffffff' }}>
-          <Stack gap="md">
+      <Center mih="100vh" p="md">
+        <Container size="xs" w="100%">
+          <Paper radius="lg" p="xl" shadow="xl">
+            <Stack>
             <Box style={{ textAlign: 'center' }}>
               <Box
                 style={{
@@ -78,7 +80,7 @@ export default function TraditionalLoginPage() {
             )}
 
             <form onSubmit={handleSubmit}>
-              <Stack gap="md">
+              <Stack>
                 <TextInput
                   label="メールアドレス"
                   placeholder="your-email@company.jp"
@@ -146,10 +148,11 @@ export default function TraditionalLoginPage() {
           </Stack>
         </Paper>
 
-        <Text size="xs" c="white" style={{ textAlign: 'center', marginTop: '24px' }}>
-          © 2024 勤怠管理システム. All rights reserved.
-        </Text>
-      </Container>
+          <Text size="xs" c="white" ta="center" mt="xl">
+            © 2024 勤怠管理システム. All rights reserved.
+          </Text>
+        </Container>
+      </Center>
     </Box>
   );
 }
