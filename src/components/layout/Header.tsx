@@ -12,7 +12,7 @@ export function Header({ title }: HeaderProps) {
   return (
     <Box h="100%" px="md" style={{ display: 'flex', alignItems: 'center' }}>
       <Group justify="space-between" style={{ width: '100%' }}>
-        <Text size="xl" fw={700}>{title}</Text>
+        <Text size="xl" fw={700}>勤怠管理アプリ</Text>
         <Group>
           <Indicator color="red" size={8} processing>
             <ActionIcon variant="subtle" size="lg" radius="xl">
