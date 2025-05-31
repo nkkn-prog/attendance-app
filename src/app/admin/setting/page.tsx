@@ -5,7 +5,7 @@ import { Building, Calendar, Clock, Users, FileText, User } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { EmployeeLayout } from '@/components/layout/EmployeeLayout';
 
-export default function SettingsPage() {
+export default function AdminSettingPage() {
   const router = useRouter();
 
   const settingsMenuItems = [

@@ -4,7 +4,7 @@ import EmployeeLayout from '@/components/layout/EmployeeLayout';
 import { Title, Paper, Stack, Text, Grid } from '@mantine/core';
 import { Calendar } from 'lucide-react';
 
-export default function AttendancesPage() {
+export default function AdminAttendancePage() {
   return (
     <EmployeeLayout title="勤怠管理">
       <Paper p="xl" shadow="md" withBorder>

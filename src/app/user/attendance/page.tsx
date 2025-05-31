@@ -3,7 +3,7 @@
 import { EmployeeLayout } from '@/components/layout/EmployeeLayout';
 import { Grid, Paper, Title } from '@mantine/core';
 
-export default function AttendancesPage() {
+export default function UserAttendancePage() {
   return (
     <EmployeeLayout title="勤怠履歴">
       <Paper p="lg" shadow="sm">

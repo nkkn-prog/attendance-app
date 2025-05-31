@@ -4,7 +4,7 @@ import { EmployeeLayout } from '@/components/layout/EmployeeLayout';
 import { RequestCard, Request } from '@/components/requests/RequestCard';
 import { Stack, Title, Paper } from '@mantine/core';
 
-export default function RequestsPage() {
+export default function RequestPage() {
   // サンプルデータ（実際の実装ではAPIから取得）
   const requests: Request[] = [
     {

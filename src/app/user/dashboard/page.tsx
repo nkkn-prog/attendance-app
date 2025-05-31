@@ -7,7 +7,7 @@ import { Announcements } from '@/components/dashboard/Announcements';
 import { Grid } from '@mantine/core';
 import { Calendar, Clock, AlertCircle } from 'lucide-react';
 
-export default function DashboardPage() {
+export default function UserDashboardPage() {
   return (
     <EmployeeLayout title="ホーム">
       <CurrentStatus />
