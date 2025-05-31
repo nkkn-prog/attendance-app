@@ -9,9 +9,9 @@ import { Home, Clock, Calendar, FileText, Settings, Users, BarChart3, Shield } f
 const userNavigationItems = [
   { id: 'dashboard', label: 'ホーム', icon: Home, path: '/user/dashboard' },
   { id: 'clock', label: '打刻', icon: Clock, path: '/user/attendance/clock' },
-  { id: 'attendances', label: '勤怠履歴', icon: Calendar, path: '/user/attendances' },
-  { id: 'requests', label: '申請', icon: FileText, path: '/user/requests' },
-  { id: 'settings', label: '設定', icon: Settings, path: '/user/settings/profile' },
+  { id: 'attendance', label: '勤怠履歴', icon: Calendar, path: '/user/attendance' },
+  { id: 'request', label: '申請', icon: FileText, path: '/user/request' },
+  { id: 'setting', label: '設定', icon: Settings, path: '/user/setting/profile' },
 ];
 
 const adminNavigationItems = [
