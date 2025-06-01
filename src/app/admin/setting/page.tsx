@@ -16,12 +16,6 @@ export default function AdminSettingPage() {
       path: '/admin/setting/company'
     },
     {
-      title: '休日カレンダー設定',
-      description: '祝日や会社休日の設定',
-      icon: <Calendar size={24} />,
-      path: '/admin/setting/holidays'
-    },
-    {
       title: '勤務パターン設定',
       description: 'シフトパターンや勤務時間の設定',
       icon: <Clock size={24} />,
@@ -32,12 +26,6 @@ export default function AdminSettingPage() {
       description: '部署の追加・編集・削除',
       icon: <Users size={24} />,
       path: '/admin/setting/departments'
-    },
-    {
-      title: '申請フォーム設定',
-      description: '各種申請フォームの設定',
-      icon: <FileText size={24} />,
-      path: '/admin/setting/request-forms'
     },
     {
       title: '管理者アカウント設定',
