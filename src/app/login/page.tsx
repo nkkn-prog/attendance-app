@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import {
   Paper,
   TextInput,
@@ -132,6 +133,24 @@ export default function LoginPage() {
                 </Button>
               </Stack>
             </form>
+
+            <Divider my="md" />
+
+            <Stack gap="xs">
+              <Text size="sm" style={{ textAlign: 'center' }}>
+                初めてログインされる方は{' '}
+                <Link
+                  href="/setup-password"
+                  style={{ color: '#2d5a8e', textDecoration: 'none', fontWeight: 600 }}
+                >
+                  パスワード設定
+                </Link>
+              </Text>
+              
+              <Text size="xs" c="dimmed" style={{ textAlign: 'center' }}>
+                ※管理者から登録された従業員の方は、初回パスワード設定が必要です
+              </Text>
+            </Stack>
           </Stack>
         </Paper>
 

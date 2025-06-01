@@ -1,7 +1,7 @@
 'use client';
 
 import { Title, Paper, Stack, Text, Grid, Card } from '@mantine/core';
-import { Building, Calendar, Clock, Users, FileText, User } from 'lucide-react';
+import { Building, Clock, Users, User } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { EmployeeLayout } from '@/components/layout/EmployeeLayout';
 
